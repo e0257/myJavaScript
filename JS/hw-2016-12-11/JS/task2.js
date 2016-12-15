@@ -1,19 +1,13 @@
 str = `apple:2016/5/27__bid_203.38-ask_203.43|2016/5/28__bid_203.35-ask_2
 03.42|2016/5/28__bid_203.39-ask_203.45`;
-//\w+(?=:)/gm
-
 
 function returnRates (str){
 	let splitStr = str.split(":");
+	//stockName
 	let stockName = splitStr[0];
+	//rates
 	let rates = splitStr[1].replace(/\s+/gm, "");
-
-	console.log(stockName);
-	console.log(rates);
-
 	rates = rates.split("|");
-	console.log(rates);
-
 	rates = rates.map(e => {
 		return {
 			date: e.match(/\d{4}\/[01]?\d\/[0-2]?\d/g).join(""),
@@ -21,8 +15,8 @@ function returnRates (str){
 			ask: e.match(/ask_\d+\.\d+/g).join("").slice(4)
 		};
 	});
-	console.log(rates);
 
+	//result
 	return {
 		stockName,
 		rates
