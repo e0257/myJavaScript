@@ -1,0 +1,26 @@
+form > input{
+	position: absolute;
+	left: 100px;
+}
+
+.navigate a{
+	display: inline-block;
+	padding: 5px;
+	margin-bottom: 5px;
+	border: 1px solid black;
+	width: 100px;
+	text-decoration: none;
+}
+
+.here {
+	background: lightgreen
+}
+
+#message{
+	display: none;
+	margin: 5px 0;
+	width: 270px;
+	height: 20px;
+	text-align: center;
+	background: lightgreen;
+}

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Books</title>
+
+  <link rel="stylesheet" href="../css/book.css">
+</head>
+<body>
+  <div class = "navigate">
+      <a href="../index.html"> Books </a>
+      <a href="../add-book.html"> Add new book </a>
+  </div>
+
+  <h2 id = "book-title"> </h2>
+
+  <p> Description: <span id ="book-desc"></span></p>
+
+  <p> Author: <span id="author"></span> </p>
+  <p> Published: <span id="published"></span> </p>
+
+  <button onclick="deleteBook(this)">Delete book</button>
+
+  <script src="../js/book.js"></script>
+</body>
+</html>
